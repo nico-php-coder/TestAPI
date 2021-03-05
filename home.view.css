@@ -8,49 +8,32 @@
   body { font-family: sans-serif; }
   
   .gallery {
-    background: #EEE;
+    background: #000;
   }
   
   .gallery-cell {
     width: 10%;
-    height: 200px;
+    height: 150px;
     margin-right: 10px;
     background: #8C8;
     counter-increment: gallery-cell;
   }
 
-/* ################# */
+/* ############################################# */
+
 body {
-    margin: 0;
     display: grid;
     grid-template-rows: 100vh;
     grid-template-columns: 100vw;
+    
+    margin: 0;
+    
+    background-color: black;
 }
 
 section {
     padding: 0%;
     margin: 0%;
-    /* border-style: solid; */
-    /* border-color: red; */
-}
-
-.main-view {
-    /* border-style: dotted;
-    border-color:royalblue; */
-
-    justify-self: center;
-    align-self: center;
-
-    height: 97%;
-    width: 97%;
-
-    display: grid;
-    grid-template-rows: 4fr 1fr;
-}
-
-.top-10 {
-    /* border-style:solid;
-    border-color: green; */
 }
 
 section.top-movies {
@@ -61,17 +44,18 @@ section.top-movies {
 
 div.top-10 {
     position: relative;
+    
     background-size: cover;
 }
 
 div.title, div.genre, div.description, div.gallery-div {
     display: inline-block;
-
+    
     margin: 2% 2% 2% 2%;
     padding: 3%;
+    
     background-color: rgba(255, 255, 255, 0.513);
     border-radius: 15px;
-    
 }
 
 div.title {
@@ -81,18 +65,43 @@ div.title {
 div.gallery-div {
     visibility: hidden;
     opacity: 0;
-    font-size: medium;
     transition: visibility 0s, opacity 0.5s linear;
+    
+    font-size: medium;
 }
 
 div.description {
     visibility: hidden;
     opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    
     position: absolute;
     bottom: 0%;
-    transition: visibility 0s, opacity 0.5s linear;
-
+    
     font-size: larger;
+}
+
+.main-view {
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+
+    justify-self: center;
+    align-self: center;
+
+    height: 97%;
+    width: 97%;
+}
+
+.slider-movies {
+    overflow: hidden;
+}
+
+.gallery-cell {
+    position: relative;
+    
+    background-size: cover;
+    
+    font-size: smaller;
 }
 
 .gallery-cell:hover div.gallery-div {
@@ -105,13 +114,4 @@ div.description {
     visibility: visible;
     opacity: 1;
     transition: visibility 0s, opacity 0.5s linear;
-}
-
-.slider-movies {
-    overflow: hidden;
-}
-
-.gallery-cell {
-    position: relative;
-    background-size: cover;
 }

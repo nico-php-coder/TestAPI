@@ -1,11 +1,13 @@
 <?php
 
-// echo "<br>";
-// echo "home.controller.php";
-
 $key = "c89646cb9c2f9f7a6144c074fff0e9c7";
+
+// each Discover request from the API only return 20 element.
+// because we need the top 40 movies, we'll need to request 2 pages.
 $pageNumber = 2;
 
+// because Discover query only provide us genre by id, we have to make
+// a Genre query that will return us all genre name along with id
 $genreQuery = new Genre_Query($key);
 $fullGenreList = $genreQuery->retrieveArrData();
 

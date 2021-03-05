@@ -1,14 +1,3 @@
-<?php
-// echo "<br>";
-// echo "home.view.php";
-
-// echo "<pre>";
-// print_r($movieList);
-// echo "</pre>";
-
-// echo "hello";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,18 +9,8 @@
 </head>
 <body>
     <div class="main-view">
+        
         <section class="top-movies">
-            <!-- <div><?=$movieList[0]->m_title?></div> -->
-            <!-- <div class="top-10"></div>
-            <div class="top-10"></div>
-            <div class="top-10"></div>
-            <div class="top-10"></div>
-            <div class="top-10"></div>
-            <div class="top-10"></div>
-            <div class="top-10"></div>
-            <div class="top-10"></div>
-            <div class="top-10"></div>
-            <div class="top-10"></div> -->
             <?php
                 for($i = 0; $i < 10; ++$i) {
                     $imgURL = '\'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'.$movieList[$i]->m_image.'\'';
@@ -49,14 +28,10 @@
             ?>
         </section>
     
-        <section class="slider-movies">
-
-            <!-- <p><code>wrapAround: true</code></p> -->
-        
+        <section class="slider-movies"> 
             <!-- Flickity HTML init -->
             <div class="gallery js-flickity"
             data-flickity-options='{ "wrapAround": true }'>
-
                 <?php
                     for($i = 10; $i < 40; ++$i) {
                         $imgURL = '\'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'.$movieList[$i]->m_image.'\'';
@@ -66,14 +41,13 @@
                             $genreString .= $value.", ";
                         }
                         
-                        $galleryDiv = '<div class="gallery-div"><b>#'.($i+10).' '.$movieList[$i]->m_title.'</b><br>'.$genreString.'</div>';
+                        $galleryDiv = '<div class="gallery-div"><b>#'.($i+1).' '.$movieList[$i]->m_title.'</b><br>'.$genreString.'</div>';
                         echo '<div class="gallery-cell" style="background-image: url('.$imgURL.');">'.$galleryDiv.'</div>';
                     }
                 ?>
-
             </div>
-
         </section>
+
     </div>
     <script src="flickity.pkgd.min.js"></script>
 </body>

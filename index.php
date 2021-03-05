@@ -1,8 +1,5 @@
 <?php
 
-// echo "<br>";
-// echo "index.php";
-
 require_once('Model/Autoloader.php');
 Autoloader::register();
 
