@@ -35,7 +35,14 @@
                 for($i = 0; $i < 10; ++$i) {
                     $imgURL = '\'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'.$movieList[$i]->m_image.'\'';
                     $titleDiv = '<div class="title">'.$movieList[$i]->m_title.'</div>';
-                    echo '<div class="top-10" style="background-image: url('.$imgURL.');">'.$titleDiv.'</div>';
+                    $genreString = '';
+
+                    foreach($movieList[$i]->m_genreStrList as $value) {
+                        $genreString .= $value.", ";
+                    }
+                                        
+                    $genreDiv = '<div class="genre">'.$genreString.'</div>';
+                    echo '<div class="top-10" style="background-image: url('.$imgURL.');">'.$titleDiv.'<br>'.$genreDiv.'</div>';
                 }
             ?>
         </section>

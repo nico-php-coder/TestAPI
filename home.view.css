@@ -13,8 +13,8 @@ section {
 }
 
 .main-view {
-    border-style: dotted;
-    border-color:royalblue;
+    /* border-style: dotted;
+    border-color:royalblue; */
 
     justify-self: center;
     align-self: center;
@@ -41,12 +41,12 @@ div.top-10 {
     background-size: cover;
 }
 
-div.title {
+div.title, div.genre {
     display: inline-block;
 
     margin: 2% 0 0 2%;
     padding: 3%;
-    background-color: rgba(255, 255, 255, 0.397);
+    background-color: rgba(255, 255, 255, 0.575);
     border-radius: 15px;
 
     font-size: medium;
