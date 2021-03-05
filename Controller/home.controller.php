@@ -6,6 +6,9 @@ echo "home.controller.php";
 $key = "c89646cb9c2f9f7a6144c074fff0e9c7";
 $pageNumber = 2;
 
+$genreQuery = new Genre_Query($key);
+$fullGenreList = $genreQuery->retrieveArrData();
+
 static $movieList;
 static $movieIndex = 0;
 
@@ -25,7 +28,8 @@ for($i = 1; $i <= $pageNumber; ++$i) {
             $value["title"],
             $value["genre_ids"],
             $value["poster_path"],
-            $value["overview"]
+            $value["overview"],
+            $fullGenreList
         );
         ++$movieIndex;
     }

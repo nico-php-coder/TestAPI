@@ -10,4 +10,12 @@ class Genre_Query extends Query {
     public function buildQuery() {
         return 'https://api.themoviedb.org/3/genre/movie/list?api_key='.$this->m_key.'&language=en-US';
     }
+
+    public function retrieveJson() {
+        return file_get_contents($this->buildQuery());
+    }
+
+    public function retrieveArrData() {
+        return json_decode($this->retrieveJson(), true);
+    }
 }
