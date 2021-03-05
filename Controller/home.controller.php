@@ -35,6 +35,5 @@ for($i = 1; $i <= $pageNumber; ++$i) {
     }
 }
 
-print_r($movieList);
 
 require_once "View/home.view.php";

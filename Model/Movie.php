@@ -12,7 +12,7 @@ class Movie {
         $this->m_genreIdList = $genreIdList;
         $this->m_genreStrList = $this->findGenre($fullGenreList);
         $this->m_image = $image;
-        $this->m_description = $description;
+        $this->m_description = substr($description, 0, 117).'...';
     }
 
     public function __get($value) {
