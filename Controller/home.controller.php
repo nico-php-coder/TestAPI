@@ -1,7 +1,7 @@
 <?php
 
-echo "<br>";
-echo "home.controller.php";
+// echo "<br>";
+// echo "home.controller.php";
 
 $key = "c89646cb9c2f9f7a6144c074fff0e9c7";
 $pageNumber = 2;
@@ -34,6 +34,5 @@ for($i = 1; $i <= $pageNumber; ++$i) {
         ++$movieIndex;
     }
 }
-
 
 require_once "View/home.view.php";
