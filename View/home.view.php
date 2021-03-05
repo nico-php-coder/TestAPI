@@ -19,17 +19,24 @@
 </head>
 <body>
     <div class="main-view">
-        <section class="top-movies">Top 10 section
-            <div><?=$movieList[0]->m_title?></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <section class="top-movies">
+            <!-- <div><?=$movieList[0]->m_title?></div> -->
+            <!-- <div class="top-10"></div>
+            <div class="top-10"></div>
+            <div class="top-10"></div>
+            <div class="top-10"></div>
+            <div class="top-10"></div>
+            <div class="top-10"></div>
+            <div class="top-10"></div>
+            <div class="top-10"></div>
+            <div class="top-10"></div>
+            <div class="top-10"></div> -->
+            <?php
+                for($i = 0; $i < 10; ++$i) {
+                    $test = '\'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'.$movieList[$i]->m_image.'\'';
+                    echo '<div class="top-10" style="background-image: url('.$test.');"></div>';
+                }
+            ?>
         </section>
     
         <section class="slider-movies">Slider

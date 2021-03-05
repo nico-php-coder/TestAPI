@@ -26,14 +26,15 @@ section {
     grid-template-rows: 4fr 1fr;
 }
 
+.top-10 {
+    border-style:solid;
+    border-color: green;
+}
+
 section.top-movies {
-
-/* 
-    justify-self: center;
-    align-self: center;
-    height: 95%;
-    width: 95%; */
-
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 section.slider-movies {
