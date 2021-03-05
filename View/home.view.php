@@ -33,8 +33,9 @@
             <div class="top-10"></div> -->
             <?php
                 for($i = 0; $i < 10; ++$i) {
-                    $test = '\'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'.$movieList[$i]->m_image.'\'';
-                    echo '<div class="top-10" style="background-image: url('.$test.');"></div>';
+                    $imgURL = '\'https://www.themoviedb.org/t/p/w600_and_h900_bestv2'.$movieList[$i]->m_image.'\'';
+                    $titleDiv = '<div class="title">'.$movieList[$i]->m_title.'</div>';
+                    echo '<div class="top-10" style="background-image: url('.$imgURL.');">'.$titleDiv.'</div>';
                 }
             ?>
         </section>
