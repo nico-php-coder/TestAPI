@@ -15,4 +15,12 @@ class Discover_Query extends Query{
     public function buildQuery() {
         return $this->m_domain.'?api_key='.$this->m_key.'&language=en-US&sort_by='.$this->m_sortBy.'&include_adult=false&include_video=false&page='.$this->m_page;
     }
+
+    public function retrieveJson() {
+        return file_get_contents($this->buildQuery());
+    }
+
+    public function retrieveArrData() {
+        return json_decode($this->retrieveJson(), true);
+    }
 }
