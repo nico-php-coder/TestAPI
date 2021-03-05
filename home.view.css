@@ -1,3 +1,35 @@
+/* external css: flickity.css */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body { font-family: sans-serif; }
+  
+  .gallery {
+    background: #EEE;
+  }
+  
+  .gallery-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+  
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+
+/* ################# */
 body {
     margin: 0;
     display: grid;
@@ -47,7 +79,7 @@ div.title, div.genre, div.description {
 
     margin: 2% 2% 2% 2%;
     padding: 3%;
-    background-color: rgba(255, 255, 255, 0.575);
+    background-color: rgba(255, 255, 255, 0.513);
     border-radius: 15px;
     
 }
@@ -62,6 +94,8 @@ div.description {
     position: absolute;
     bottom: 0%;
     transition: visibility 0s, opacity 0.5s linear;
+
+    font-size: larger;
 }
 
 .top-10:hover div.description {
@@ -70,6 +104,10 @@ div.description {
     transition: visibility 0s, opacity 0.5s linear;
 }
 
-section.slider-movies {
+.slider-movies {
+    overflow: hidden;
+}
 
+.gallery-cell {
+    background-color: red;
 }
