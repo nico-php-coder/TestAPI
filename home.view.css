@@ -12,21 +12,11 @@
   }
   
   .gallery-cell {
-    width: 66%;
+    width: 10%;
     height: 200px;
     margin-right: 10px;
     background: #8C8;
     counter-increment: gallery-cell;
-  }
-  
-  /* cell number */
-  .gallery-cell:before {
-    display: block;
-    text-align: center;
-    content: counter(gallery-cell);
-    line-height: 200px;
-    font-size: 80px;
-    color: white;
   }
 
 /* ################# */
@@ -74,7 +64,7 @@ div.top-10 {
     background-size: cover;
 }
 
-div.title, div.genre, div.description {
+div.title, div.genre, div.description, div.gallery-div {
     display: inline-block;
 
     margin: 2% 2% 2% 2%;
@@ -88,6 +78,13 @@ div.title {
     font-size:large;
 }
 
+div.gallery-div {
+    visibility: hidden;
+    opacity: 0;
+    font-size: medium;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
 div.description {
     visibility: hidden;
     opacity: 0;
@@ -96,6 +93,12 @@ div.description {
     transition: visibility 0s, opacity 0.5s linear;
 
     font-size: larger;
+}
+
+.gallery-cell:hover div.gallery-div {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
 .top-10:hover div.description {
@@ -109,5 +112,6 @@ div.description {
 }
 
 .gallery-cell {
-    background-color: red;
+    position: relative;
+    background-size: cover;
 }

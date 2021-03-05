@@ -66,10 +66,8 @@
                             $genreString .= $value.", ";
                         }
                         
-                        $titleDiv = '<div class="title"><b>#'.($i+1).' '.$movieList[$i]->m_title.'</b></div>';
-                        $genreDiv = '<div class="genre">'.$genreString.'</div>';
-                        $descriptionDiv = '<div class="description">'.$movieList[$i]->m_description.'</div>';
-                        echo '<div class="gallery-cell" style="background-image: url('.$imgURL.');">'.$titleDiv.'<br>'.$genreDiv.'<br>'.$descriptionDiv.'</div>';
+                        $galleryDiv = '<div class="gallery-div"><b>#'.($i+10).' '.$movieList[$i]->m_title.'</b><br>'.$genreString.'</div>';
+                        echo '<div class="gallery-cell" style="background-image: url('.$imgURL.');">'.$galleryDiv.'</div>';
                     }
                 ?>
 
